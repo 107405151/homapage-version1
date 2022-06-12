@@ -24,7 +24,12 @@
             .logo {
                 width: 234px;
                 height: 46px;
-                margin-top: 80px;
+                /* 
+                   margin-top -> padding-top 
+                   避免畫面上方顏色不一致
+                 */
+                /* margin-top: 80px; */
+                padding-top: 80px;
                 margin-left: auto;
                 margin-right: auto;
                 margin-bottom: 40px;
@@ -94,7 +99,12 @@
             .logo {
                 width: 257.81px;
                 height: 50px;
-                margin-top: 90px;
+                /* 
+                   margin-top -> padding-top 
+                   避免畫面上方顏色不一致
+                 */
+                /* margin-top: 90px; */
+                padding-top: 90px;
                 margin-left: auto;
                 margin-right: auto;
                 margin-bottom: 40px;
@@ -166,7 +176,12 @@
         .logo {
             width: 251.26px;
             height: 50px;
-            margin-top: 90px;
+            /* 
+               margin-top -> padding-top 
+               避免畫面上方顏色不一致
+             */
+            /* margin-top: 90px; */
+            padding-top: 90px;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 20px;
@@ -312,12 +327,20 @@
 
 </head>
 
-<body style="background-color: #F5F5F5;">
+<!-- 將 body 的背景色改成 #D5D5D5 -->
+<!-- 避免網頁瀏覽器下方顏色不一致 -->
+<body style="background-color: #D5D5D5;">
 
     <!-- mobile and tablet -->
-    <div class="only-for-mobile-and-tablet">
+    <div class="only-for-mobile-and-tablet" style="background-color: #f5f5f5;">
         <div class="logo">
-            <img src="/Users/yousong/Desktop/312編輯市/homepage/logo-green.svg">
+          <!--
+            原本的寫法是絕對路徑，那是你電腦上的路徑，
+            但其他人在瀏覽網頁時，並無法從你電腦拿到照片。
+            其他人得從 GitHub 上拿到照片，所以我們得寫相對路徑，
+            瀏覽器才會讀得到照片。
+          -->
+            <img src="./logo-green.svg">
         </div>
 
         <div class="loudman">
@@ -331,15 +354,15 @@
             data-bs-interval="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/Users/yousong/Desktop/312編輯市/homepage/school_closed_tablet.png"
+                    <img src="./school_closed_tablet.png"
                         class="d-block w-100 buildings-image classroom-image" alt="教室">
                 </div>
                 <div class="carousel-item">
-                    <img src="/Users/yousong/Desktop/312編輯市/homepage/cinema_closed_tablet.png"
+                    <img src="./cinema_closed_tablet.png"
                         class="d-block w-100 buildings-image cinema-image" alt="放映館">
                 </div>
                 <div class="carousel-item">
-                    <img src="/Users/yousong/Desktop/312編輯市/homepage/museum_closed_tablet.png"
+                    <img src="./museum_closed_tablet.png"
                         class="d-block w-100 buildings-image museum-image" alt="博物館">
                 </div>
             </div>
@@ -365,9 +388,9 @@
     </div>
 
     <!-- desktop -->
-    <div class="only-for-desktop">
+    <div class="only-for-desktop"  style="background-color: #f5f5f5;">
         <div class="logo">
-            <img src="/Users/yousong/Desktop/312編輯市/homepage/logo-green.svg">
+            <img src="./logo-green.svg">
         </div>
     
         <div class="loudman">
@@ -377,15 +400,15 @@
         </div>
     
         <div class="buildings">
-            <img src="/Users/yousong/Desktop/312編輯市/homepage/selections.svg" alt="各版面物件">
+            <img src="./selections.svg" alt="各版面物件">
             <div class="building school-building">
-                <img src="/Users/yousong/Desktop/312編輯市/homepage/selections-school-selected.svg" alt="學校">
+                <img src="./selections-school-selected.svg" alt="學校">
             </div>
             <div class="building cinema-building">
-                <img src="/Users/yousong/Desktop/312編輯市/homepage/selections-cinema-selected.svg" alt="放映館">
+                <img src="./selections-cinema-selected.svg" alt="放映館">
             </div>
             <div class="building museum-building">
-                <img src="/Users/yousong/Desktop/312編輯市/homepage/selections-museum-selected.svg" alt="博物館">
+                <img src="./selections-museum-selected.svg" alt="博物館">
             </div>
         </div>
     
